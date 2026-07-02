@@ -7,8 +7,9 @@ function renderizarNecessidades(lista = necessidades) {
 
     container.innerHTML = "";
 
-    if (!Array.isArray(lista)) return;
-
+if (!Array.isArray(necessidades)) {
+    necessidades = [];
+}
     if (lista.length === 0) {
         container.innerHTML = `
         <p style="text-align:center; color:#0a2a66;">
