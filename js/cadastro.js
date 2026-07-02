@@ -35,6 +35,8 @@ document.getElementById("formNecessidade").addEventListener("submit", function(e
 
     necessidades.push(novaNecessidade);
 
+    localStorage.setItem("necessidades", JSON.stringify(necessidades));
+
     alert("Necessidade cadastrada com sucesso!");
     this.reset();
 });

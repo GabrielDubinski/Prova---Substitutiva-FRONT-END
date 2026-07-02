@@ -6,23 +6,29 @@
 }
 
 body {
-    background: #f5f5f5;
-    color: #333;
+    background: #000000;
+    color: #0a2a66;
+    font-family: Arial, sans-serif;
 }
 
 header {
-    background: #2d6a4f;
-    color: white;
+    background: #0a0a0a;
+    color: #0a2a66;
     padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid #0a2a66;
 }
 
 nav a {
-    color: white;
+    color: #0a2a66;
     margin-left: 15px;
     text-decoration: none;
+}
+
+nav a:hover {
+    color: #1f4fbf;
 }
 
 nav a:hover {
@@ -47,12 +53,12 @@ section {
 }
 
 .filtros input,
-.filtros select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    flex: 1;
-    min-width: 200px;
+.filtros select,
+input,
+textarea {
+    background: #111;
+    color: #0a2a66;
+    border: 1px solid #0a2a66;
 }
 
 #listaNecessidades {
@@ -62,10 +68,11 @@ section {
 }
 
 .card {
-    background: white;
+    background: #111111;
+    color: #0a2a66;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 0 8px rgba(10, 42, 102, 0.4);
     transition: 0.2s;
 }
 
