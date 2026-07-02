@@ -3,48 +3,38 @@ let necessidades = [];
 document.getElementById("formNecessidade").addEventListener("submit", function(e) {
     e.preventDefault();
 
+    let instituicao = document.getElementById("instituicao").value.trim();
+    let tipo = document.getElementById("tipo").value;
+    let titulo = document.getElementById("titulo").value.trim();
+    let descricao = document.getElementById("descricao").value.trim();
+    let cep = document.getElementById("cep").value.trim();
+    let contato = document.getElementById("contato").value.trim();
+
+    if (!instituicao || !tipo || !titulo || !descricao || !cep || !contato) {
+        alert("Preencha todos os campos obrigatórios!");
+        return;
+    }
+
+    if (!contato.includes("@") && !contato.match(/\d/)) {
+        alert("Informe um e-mail ou telefone válido!");
+        return;
+    }
+
     let novaNecessidade = {
-        instituicao: document.getElementById("instituicao").value,
-        tipo: document.getElementById("tipo").value,
-        titulo: document.getElementById("titulo").value,
-        descricao: document.getElementById("descricao").value,
-        cep: document.getElementById("cep").value,
+        instituicao,
+        tipo,
+        titulo,
+        descricao,
+        cep,
         rua: document.getElementById("rua").value,
         bairro: document.getElementById("bairro").value,
         cidade: document.getElementById("cidade").value,
         estado: document.getElementById("estado").value,
-        contato: document.getElementById("contato").value
+        contato
     };
 
     necessidades.push(novaNecessidade);
 
     alert("Necessidade cadastrada com sucesso!");
     this.reset();
-
-    document.getElementById("cep").addEventListener("blur", async function () {
-    let cep = this.value.replace(/\D/g, "");
-
-    if (cep.length !== 8) {
-        alert("CEP inválido");
-        return;
-    }
-
-    try {
-        let resposta = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-        let data = await resposta.json();
-
-        if (data.erro) {
-            alert("CEP não encontrado");
-            return;
-        }
-
-        document.getElementById("rua").value = data.logradouro;
-        document.getElementById("bairro").value = data.bairro;
-        document.getElementById("cidade").value = data.localidade;
-        document.getElementById("estado").value = data.uf;
-
-    } catch (error) {
-        alert("Erro ao buscar CEP");
-    }
-});
 });
