@@ -37,8 +37,24 @@ nav a:hover {
     text-decoration: underline;
 }
 
+
+button {
+    background: #0a2a66;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1f4fbf;
+    box-shadow: 0 0 10px #1f4fbf;
+}
 main {
-    padding: 20px;
+    padding: 25px;
+}
 }
 section {
     background: #111111;
@@ -63,7 +79,8 @@ textarea {
     border: 1px solid #0a2a66;
 }
 h2 {
-    color: #0a2a66;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 #listaNecessidades {
@@ -80,6 +97,13 @@ h2 {
     border: 1px solid #0a2a66;
     box-shadow: 0 0 10px rgba(10, 42, 102, 0.3);
     transition: 0.3s;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
 }
 
 .card:hover {
