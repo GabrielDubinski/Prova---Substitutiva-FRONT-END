@@ -72,3 +72,43 @@ section {
 .card:hover {
     transform: scale(1.02);
 }
+
+/* 📱 RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    .filtros input,
+    .filtros select {
+        width: 100%;
+    }
+
+    #listaNecessidades {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+}
