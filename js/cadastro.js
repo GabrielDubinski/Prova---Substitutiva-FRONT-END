@@ -1,5 +1,4 @@
 let necessidades = JSON.parse(localStorage.getItem("necessidades")) || [];
-
 document.getElementById("formNecessidade").addEventListener("submit", function(e) {
     e.preventDefault();
 
