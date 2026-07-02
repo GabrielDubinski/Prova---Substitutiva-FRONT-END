@@ -6,9 +6,9 @@
 }
 
 body {
-    background: #000000;
+    background: #000;
     color: #0a2a66;
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', Arial, sans-serif;
 }
 
 header {
@@ -19,16 +19,18 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #0a2a66;
+    box-shadow: 0 0 15px rgba(10, 42, 102, 0.6);
 }
 
-nav a {
+header {
+    background: #0a0a0a;
     color: #0a2a66;
-    margin-left: 15px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: #1f4fbf;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #0a2a66;
+    box-shadow: 0 0 15px rgba(10, 42, 102, 0.6);
 }
 
 nav a:hover {
@@ -71,18 +73,19 @@ h2 {
 }
 
 .card {
-    background: #111111;
+    background: #111;
     color: #0a2a66;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 8px rgba(10, 42, 102, 0.4);
-    transition: 0.2s;
+    border: 1px solid #0a2a66;
+    box-shadow: 0 0 10px rgba(10, 42, 102, 0.3);
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(31, 79, 191, 0.6);
 }
-
 /* 📱 RESPONSIVIDADE */
 
 @media (max-width: 768px) {
@@ -121,4 +124,13 @@ h2 {
     .card {
         padding: 12px;
     }
+
+    input, textarea, select {
+    background: #111;
+    color: #0a2a66;
+    border: 1px solid #0a2a66;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+}
 }
