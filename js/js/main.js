@@ -1,4 +1,4 @@
-let necessidades = [];
+let necessidades = JSON.parse(localStorage.getItem("necessidades")) || [];
 
 function renderizarNecessidades(lista = necessidades) {
     const container = document.getElementById("listaNecessidades");
