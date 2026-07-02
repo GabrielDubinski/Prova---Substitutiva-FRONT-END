@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Necessidade</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script src="js/cadastro.js"></script>
+
+<header>
+    <h1>Conexão Voluntária</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cadastro.html">Cadastrar Necessidade</a>
+        <a href="lista.html">Ver Necessidades</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Cadastrar Necessidade</h2>
+
+    <form id="formNecessidade">
+
+        <input type="text" id="instituicao" placeholder="Nome da Instituição" required>
+
+        <select id="tipo" required>
+            <option value="">Tipo de Ajuda</option>
+            <option value="Educação">Educação</option>
+            <option value="Saúde">Saúde</option>
+            <option value="Meio Ambiente">Meio Ambiente</option>
+            <option value="Doação de Alimentos">Doação de Alimentos</option>
+            <option value="Doação de Roupas">Doação de Roupas</option>
+            <option value="Outros">Outros</option>
+        </select>
+
+        <input type="text" id="titulo" placeholder="Título da Necessidade" required>
+
+        <textarea id="descricao" placeholder="Descrição detalhada" required></textarea>
+
+        <input type="text" id="cep" placeholder="CEP" required>
+
+        <input type="text" id="rua" placeholder="Rua" required>
+        <input type="text" id="bairro" placeholder="Bairro" required>
+        <input type="text" id="cidade" placeholder="Cidade" required>
+        <input type="text" id="estado" placeholder="Estado" required>
+
+        <input type="text" id="contato" placeholder="Contato (email ou telefone)" required>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+</main>
+
+</body>
+</html>
