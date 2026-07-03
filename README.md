@@ -1,97 +1,83 @@
 📌 Conexão Voluntária
 
-Plataforma desenvolvida para conectar ONGs e voluntários de forma simples, permitindo o cadastro e visualização de necessidades sociais.
+Esse projeto foi criado para facilitar a conexão entre ONGs e pessoas que querem ajudar como voluntárias.
 
-🚀 Objetivo do Projeto
+A ideia é simples:
+as instituições cadastram suas necessidades e os voluntários conseguem visualizar tudo em um só lugar.
 
-Criar um sistema web onde instituições possam:
+💡 Sobre o projeto
 
-Cadastrar necessidades (doações, ajuda, voluntariado)
-Visualizar necessidades cadastradas
-Filtrar e buscar oportunidades
-Manter dados salvos no navegador
-🧠 Funcionalidades
-🏠 Página Inicial
-Apresentação da plataforma
-Navegação entre páginas
-📝 Cadastro de Necessidades
-Formulário com:
-Nome da instituição
-Tipo de ajuda
-Título da necessidade
-Descrição
-CEP (com API ViaCEP)
-Endereço automático
-Contato
-Validação de campos
-Salvamento de dados no localStorage
-📋 Visualização de Necessidades
-Lista dinâmica de cards
-Dados carregados do localStorage
-Botão de exclusão
-Mensagem quando não há dados
-🔎 Filtros e Busca
-Pesquisa por título ou descrição
-Filtro por tipo de ajuda
-🎨 Tecnologias Utilizadas
-💻 Front-end
-HTML5
-CSS3
-JavaScript (Vanilla JS)
-🎯 Funcionalidades Web
-localStorage (armazenamento local)
-Fetch API (ViaCEP)
-Manipulação DOM
-🛠️ Ferramentas Utilizadas
-Visual Studio Code (VS Code)
-Git
-GitHub
-GitHub Pages (publicação)
-Navegador (Chrome/Edge)
-GitHub Desktop (opcional)
-📂 Estrutura do Projeto
+Esse sistema foi desenvolvido como atividade acadêmica, focado em praticar:
+
+criação de páginas web
+manipulação de dados com JavaScript
+uso de localStorage
+integração com API externa (ViaCEP)
+organização de projeto com Git
+⚙️ O que o sistema faz
+🏠 Página inicial
+
+Uma apresentação simples da plataforma e sua proposta.
+
+📝 Cadastro de necessidades
+
+Aqui a ONG pode cadastrar uma nova necessidade com:
+
+nome da instituição
+tipo de ajuda
+título
+descrição
+CEP (preenchimento automático de endereço)
+contato
+
+Os dados ficam salvos no navegador (localStorage).
+
+📋 Lista de necessidades
+
+Mostra todas as necessidades cadastradas em forma de cards.
+
+Nessa tela também é possível:
+
+visualizar os dados
+excluir necessidades
+ver tudo atualizado em tempo real
+🔎 Filtros e busca
+
+O usuário pode:
+
+pesquisar por título ou descrição
+filtrar por tipo de ajuda
+🛠️ Tecnologias usadas
+HTML
+CSS
+JavaScript
+API ViaCEP
+localStorage
+Git e GitHub
+📁 Organização do projeto
 /css
-   style.css
+  style.css
 
 /js
-   cadastro.js
-   main.js
+  cadastro.js
+  main.js
 
 index.html
 cadastro.html
 ver-necessidades.html
-🔄 Versionamento (Git)
+🚀 Como rodar o projeto
 
-O projeto foi desenvolvido com commits constantes usando Git:
+Basta abrir o arquivo index.html no navegador.
 
-Exemplo de mensagens utilizadas:
+🎯 Aprendizados
 
-criação de estrutura inicial
-implementação do formulário
-integração com localStorage
-criação da lista dinâmica
-ajuste de layout e responsividade
-melhorias visuais e correções
-🌐 Publicação
+Durante o desenvolvimento, foi possível praticar:
 
-O projeto pode ser publicado utilizando:
-
-👉 GitHub Pages
-
-📊 Resultado Final
-
-✔ Sistema funcional
-✔ Interface responsiva
-✔ Cadastro e listagem funcionando
-✔ Dados persistentes
-✔ Filtros e busca
-✔ Visual moderno
-
-👨‍💻 Desenvolvido com:
-
-Projeto acadêmico de desenvolvimento web focado em:
-
+lógica com JavaScript
+manipulação de DOM
+consumo de API
 organização de código
-boas práticas
 versionamento com Git
-construção de interface funcional
+👨‍💻 Observação
+
+Esse projeto foi feito com foco educacional, mas já simula bem um sistema real de conexão entre pessoas e instituições.
