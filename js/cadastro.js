@@ -1,5 +1,4 @@
-let necessidades = JSON.parse(localStorage.getItem("necessidades")) || [];
-document.getElementById("formNecessidade").addEventListener("submit", function(e) {
+let necessidades = JSON.parse(localStorage.getItem("necessidades")) || [];document.getElementById("formNecessidade").addEventListener("submit", function(e) {
     e.preventDefault();
 
     let novaNecessidade = {
@@ -16,7 +15,10 @@ document.getElementById("formNecessidade").addEventListener("submit", function(e
     };
 
     necessidades.push(novaNecessidade);
-
+    if (!novaNecessidade.titulo || !novaNecessidade.instituicao) {
+    alert("Preencha os campos principais!");
+    return;
+}
     localStorage.setItem("necessidades", JSON.stringify(necessidades));
 
     alert("Necessidade cadastrada com sucesso!");

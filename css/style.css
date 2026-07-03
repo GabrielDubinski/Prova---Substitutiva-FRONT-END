@@ -2,129 +2,155 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background: #000;
-    color: #0a2a66;
     font-family: 'Orbitron', Arial, sans-serif;
 }
 
-header {
-    background: #0a0a0a;
+body {
+    background: radial-gradient(circle at top, #050505, #000);
     color: #0a2a66;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #0a2a66;
-    box-shadow: 0 0 15px rgba(10, 42, 102, 0.6);
 }
 
 header {
     background: #0a0a0a;
     color: #0a2a66;
-    padding: 15px;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #0a2a66;
-    box-shadow: 0 0 15px rgba(10, 42, 102, 0.6);
+    box-shadow: 0 0 20px rgba(10, 42, 102, 0.6);
+}
+
+nav a {
+    color: #0a2a66;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: 0.3s;
+    font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #1f4fbf;
+    text-shadow: 0 0 10px #1f4fbf;
 }
 
-
-button {
-    background: #0a2a66;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
+h2 {
+    text-align: center;
+    margin: 25px 0;
+    letter-spacing: 1px;
 }
 
-button:hover {
-    background: #1f4fbf;
-    box-shadow: 0 0 10px #1f4fbf;
-}
 main {
     padding: 25px;
 }
-}
+
 section {
-    background: #111111;
+    background: #0d0d0d;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid #0a2a66;
+    box-shadow: 0 0 15px rgba(10, 42, 102, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 480px;
+    margin: 40px auto;
+    background: rgba(13, 13, 13, 0.9);
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid #0a2a66;
+    box-shadow: 0 0 25px rgba(10, 42, 102, 0.25);
+}
+
+input,
+textarea,
+select {
+    background: #111;
+    color: #0a2a66;
+    border: 1px solid #0a2a66;
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.25s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #1f4fbf;
+    box-shadow: 0 0 12px rgba(31, 79, 191, 0.5);
+}
+
+button {
+    background: linear-gradient(90deg, #0a2a66, #1f4fbf);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #1f4fbf;
 }
 
 .filtros {
     display: flex;
-    gap: 10px;
-    margin: 20px 0;
+    gap: 12px;
+    margin: 25px 0;
     flex-wrap: wrap;
 }
 
 .filtros input,
-.filtros select,
-input,
-textarea {
-    background: #111;
-    color: #0a2a66;
-    border: 1px solid #0a2a66;
-}
-h2 {
-    text-align: center;
-    margin-bottom: 15px;
+.filtros select {
+    flex: 1;
+    min-width: 220px;
 }
 
 #listaNecessidades {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 15px;
 }
 
 .card {
-    background: #111;
+    background: #0f0f0f;
     color: #0a2a66;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 16px;
+    border-radius: 12px;
     border: 1px solid #0a2a66;
-    box-shadow: 0 0 10px rgba(10, 42, 102, 0.3);
+    box-shadow: 0 0 12px rgba(10, 42, 102, 0.25);
     transition: 0.3s;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin: auto;
 }
 
 .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 20px rgba(31, 79, 191, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(31, 79, 191, 0.6);
 }
 
 .card button {
     margin-top: 10px;
-    background: red;
+    background: #ff2a2a;
     color: white;
-    border: none;
-    padding: 6px;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 7px;
+    border-radius: 6px;
+}
+
+.card button:hover {
+    background: #ff0000;
 }
 
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
     }
 
     nav {
@@ -133,11 +159,6 @@ form {
 
     .filtros {
         flex-direction: column;
-    }
-
-    .filtros input,
-    .filtros select {
-        width: 100%;
     }
 
     #listaNecessidades {
@@ -153,17 +174,4 @@ form {
     header h1 {
         font-size: 18px;
     }
-
-    .card {
-        padding: 12px;
-    }
-
-    input, textarea, select {
-    background: #111;
-    color: #0a2a66;
-    border: 1px solid #0a2a66;
-    padding: 10px;
-    border-radius: 6px;
-    outline: none;
-}
 }
